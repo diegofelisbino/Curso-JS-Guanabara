@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+
+<body>
+    <h1>Nacionalidade</h1>
+    Informe o seu país: <input type="text" name="txtNacionalidade" id="txtNacionalidade">
+    <input type="button" value="Pesquisar" onclick="pesquisar()">
+    <div id="resposta">
+
+    </div>
+    <script>
+        
+        function pesquisar() {
+
+            var resposta = document.querySelector("div#resposta");            
+            var txtPais = document.querySelector("input#txtNacionalidade");
+            var paisInformado = txtPais.value;
+            
+            
+            
+            if (paisInformado.toUpperCase() == "BRASIL") {
+
+                resposta.innerHTML = "<p>Você é <strong> Brasileiro </strong></p>";
+
+            } else {
+
+                resposta.innerHTML = `<p>Você é <strong> extrangeiro </strong></p>`;
+            }
+
+            
+        }
+
+
+
+    </script>
+</body>
+
+</html>
